@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">RigApp</string>
-    <string name="login">Login</string>
-    <string name="new_report">New Report</string>
+    <string name="login">உள் நுழை</string>
+    <string name="new_report">புதிய அறிக்கை</string>
     <string name="shr_hint_username">User Name</string>
     <string name="shr_hint_email">Email Address</string>
     <string name="shr_hint_mobile">Mobile Number</string>
