@@ -1,6 +1,7 @@
 package in.co.santhoshiot.rigapp;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -9,6 +10,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,31 +19,72 @@ public class SplashScreen extends AppCompatActivity {
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
     boolean isloggedin;
+   public static String emp_id,emp_name,user_type;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        preferences=getSharedPreferences("rigapp",MODE_PRIVATE);
-        editor=preferences.edit();
-        boolean isfirsttime=preferences.getBoolean("isfirst",true);
-        isloggedin=preferences.getBoolean("islogged",false);
-        if (isfirsttime)
+        preferences = getSharedPreferences("rigapp", MODE_PRIVATE);
+        editor = preferences.edit();
+        isloggedin = preferences.getBoolean("islogged", false);
+        emp_id = preferences.getString("emp_id", "0");
+        emp_name = preferences.getString("emp_name", "0");
+        user_type = preferences.getString("user_type", "user_type");
+        Log.d("user Status", "emp name: " + emp_name + " emp id: " + emp_id + " type: " + user_type);
+        Log.d("user isloggedin", "emp status: " + isloggedin);
+        if (isloggedin) {
+            Log.d("isloggedin", ""+isloggedin);
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-
+                    Log.d("Build.VERSION", ""+Build.VERSION.SDK_INT );
                     if (Build.VERSION.SDK_INT < 23) {
                         startactivity();
+                        Log.d("startactivity", "go" );
                     } else {
                         if (checkPermission()) {
                             startactivity();
+                            Log.d("checkPermission", "checkPermission" );
                         }
                     }
                 }
-            },2000);
+            }, 2000);
+        }
+        if (!isloggedin) {
+            Intent intent = new Intent(SplashScreen.this, Login.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+            finish();
+        }
     }
 
+
     private void startactivity() {
+        Log.d("startactivity", "come" );
+         if(user_type.equalsIgnoreCase("manager")){
+
+             editor.putString("emp_id", emp_id);
+             editor.putString("emp_name", emp_name);
+             editor.putString("user_type",user_type);
+             editor.commit();
+             Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+             startActivity(intent);
+             overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+             Log.d("user Status","emp name: "+emp_name+" emp id: "+emp_id+" type: "+user_type);
+             finish();
+         }
+           else if(user_type.equalsIgnoreCase("owner")){
+             editor.putString("emp_id", emp_id);
+             editor.putString("emp_name", emp_name);
+             editor.putString("user_type",user_type);
+             editor.commit();
+             Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+             startActivity(intent);
+             overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+             Log.d("user Status","emp name: "+emp_name+" emp id: "+emp_id+" type: "+user_type);
+             finish();
+            }
+
     }
 
     private boolean checkPermission()

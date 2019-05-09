@@ -1,6 +1,7 @@
 package in.co.santhoshiot.rigapp;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.design.widget.Snackbar;
@@ -34,7 +35,7 @@ public class Login extends AppCompatActivity {
     String password = "", username = "";
     boolean loginstatus = false;
     String emp_id = "0";
-    String emp_name = "", user_status = "";
+    String emp_name = "", user_type = "";
     private boolean iscomplete = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +47,7 @@ public class Login extends AppCompatActivity {
         et_username = (EditText) findViewById(R.id.login_et_username);
         et_password = (EditText) findViewById(R.id.login_et_password);
 
-        sharedPreference = getSharedPreferences("rigapp", MODE_PRIVATE);
+        sharedPreference = getSharedPreferences("rigapp", MODE_PRIVATE);//rigapp
         editor = sharedPreference.edit();
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         List<String> dataset = new LinkedList<>(Arrays.asList("Owner", "Manager"));
@@ -72,7 +73,15 @@ public class Login extends AppCompatActivity {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            checkpassword();
+
+            String type;
+            type=roll.getSelectedItem().toString();
+            if(type.equalsIgnoreCase("Manager")) {
+                checkpassword();
+            }
+            else if(type.equalsIgnoreCase("Owner")) {
+                checkpassword1();
+            }
             return null;
         }
         @Override
@@ -82,6 +91,34 @@ public class Login extends AppCompatActivity {
                 pDialog.cancel();
                 if (loginstatus) {
                     showsnackbar("Sucessfully Login");
+                    user_type=roll.getSelectedItem().toString();
+                    if(user_type.equalsIgnoreCase("Manager")) {
+                        editor.putString("emp_id", emp_id);
+                        editor.putBoolean("islogged", true);
+                        editor.putString("emp_name", emp_name);
+                        editor.putString("user_type",user_type);
+                        editor.commit();
+                        Intent intent = new Intent(Login.this, MainActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                        finish();
+                    }
+                    else if(user_type.equalsIgnoreCase("Owner")) {
+
+                        editor.putString("emp_id", emp_id);
+                        editor.putBoolean("islogged", true);
+                        editor.putString("emp_name", emp_name);
+                        editor.putString("user_type",user_type);
+                        editor.commit();
+                        Intent intent = new Intent(Login.this, MainActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                        finish();
+                    }
+
+
+
+
                 } else {
                     showsnackbar("Invalid Password");
                 }
@@ -127,6 +164,48 @@ public class Login extends AppCompatActivity {
             }
         }catch (Exception e){
             Log.e("ggggg",e.toString());
+
+        }
+    }
+
+    public void checkpassword1() {
+        try {
+            Connection con = null;
+            ResultSet rs = null;
+            Statement statement = null;
+            String aa = "";
+            try {
+                con = DBconnection.sqlconn();
+                if (con != null) {
+                    statement = con.createStatement();
+                    String queryString = "select * from tb_owner where Password='" + password + "' and Username='" + username + "'  ";
+                    rs = statement.executeQuery(queryString);
+                    Log.e("ggg", rs.isFirst() + "-" + rs.first());
+                    if (rs.isFirst()) {
+                        loginstatus = true;
+                        emp_id = rs.getString("id");
+                        emp_name = rs.getString("EmailId");
+                        Log.d("Login Status", "emp name: " + emp_name + " emp id: " + emp_id);
+
+                    } else {
+                        loginstatus = false;
+                    }
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    statement.close();
+                    con.close();
+                    rs.close();
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        } catch (Exception e) {
+            Log.e("ggggg", e.toString());
 
         }
     }
