@@ -18,4 +18,5 @@
     <string name="shr_error_password">Password must contain at least 4 charactera</string>
     <string name="shr_error_uname">User Name must contain at least 4 charactera</string>
     <string name="nav_header_title">Email Address</string>
+    <string name="password">Password</string>
 </resources>

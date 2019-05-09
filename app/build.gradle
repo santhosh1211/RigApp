@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "in.co.santhoshiot.rigapp"
-        minSdkVersion 14
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -15,6 +15,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    packagingOptions {
+        exclude 'META-INF/proguard/androidx-annotations.pro'
     }
 }
 
@@ -28,4 +31,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     //chat
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    // spinner
+    implementation 'com.github.arcadefire:nice-spinner:1.4'
+    implementation files('libs/mysql-connector.jar')
+    implementation 'android.arch.work:work-runtime:1.0.0-alpha08'
 }
