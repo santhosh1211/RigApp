@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintTop_toBottomOf="parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="50dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Manager Home"
+              android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/text_add"
+        android:layout_marginTop="20dp"
+        android:weightSum="3"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:layout_weight="1.4"
+            android:textSize="10sp"
+            android:textColor="@color/text_color_left"
+            android:text="Manager"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.2"
+            android:textSize="10sp"
+            android:text=""
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|right"
+            android:paddingRight="10dp"
+            android:text="Kannan"
+            android:textColor="@color/text_color_right"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/text_even"
+        android:weightSum="3"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="Rig Vechle No"
+            android:textColor="@color/text_color_left"
+            android:textSize="10sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.2"
+            android:textSize="10sp"
+            android:text=""
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|right"
+            android:paddingRight="10dp"
+            android:text=" TN38 4397"
+            android:textColor="@color/text_color_right"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/text_add"
+        android:layout_marginTop="0dp"
+        android:weightSum="3"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="Support Vechile No"
+            android:textColor="@color/text_color_left"
+            android:textSize="10sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.2"
+            android:textSize="10sp"
+            android:text=""
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|right"
+            android:paddingRight="10dp"
+            android:text=" TN38 4398"
+            android:textColor="@color/text_color_right"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/text_even"
+        android:weightSum="3"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="Rig Driver"
+            android:textColor="@color/text_color_left"
+            android:textSize="10sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.2"
+            android:textSize="10sp"
+            android:text=""
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|right"
+            android:paddingRight="10dp"
+            android:text="kumar"
+            android:textColor="@color/text_color_right"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/text_add"
+        android:layout_marginTop="0dp"
+        android:weightSum="3"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="Support Driver"
+            android:textColor="@color/text_color_left"
+            android:textSize="10sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.2"
+            android:textSize="10sp"
+            android:text=""
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|right"
+            android:paddingRight="10dp"
+            android:text="Mani"
+            android:textColor="@color/text_color_right"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/text_even"
+        android:weightSum="3"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="Cook"
+            android:textColor="@color/text_color_left"
+            android:textSize="10sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.2"
+            android:textSize="10sp"
+            android:text=""
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|right"
+            android:paddingRight="10dp"
+            android:text="Senthil"
+            android:textColor="@color/text_color_right"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/text_add"
+        android:layout_marginTop="0dp"
+        android:weightSum="3"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="Labour(1)"
+            android:textColor="@color/text_color_left"
+            android:textSize="10sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.2"
+            android:textSize="10sp"
+            android:text=""
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|right"
+            android:paddingRight="10dp"
+            android:text="Bharathi"
+            android:textColor="@color/text_color_right"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/text_even"
+        android:weightSum="3"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="Labour(2)"
+            android:textColor="@color/text_color_left"
+            android:textSize="10sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.2"
+            android:textSize="10sp"
+            android:text=""
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|right"
+            android:paddingRight="10dp"
+            android:text="guru"
+            android:textColor="@color/text_color_right"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/text_add"
+        android:layout_marginTop="0dp"
+        android:weightSum="3"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="Labour(3)"
+            android:textColor="@color/text_color_left"
+            android:textSize="10sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.2"
+            android:textSize="10sp"
+            android:text=""
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|right"
+            android:paddingRight="10dp"
+            android:text="shiva"
+            android:textColor="@color/text_color_right"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/text_even"
+        android:weightSum="3"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="Labour(4)"
+            android:textColor="@color/text_color_left"
+            android:textSize="10sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.2"
+            android:textSize="10sp"
+            android:text=""
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|right"
+            android:paddingRight="10dp"
+            android:text="murugan"
+            android:textColor="@color/text_color_right"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/text_add"
+        android:layout_marginTop="0dp"
+        android:weightSum="3"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="Labour(5)"
+            android:textColor="@color/text_color_left"
+            android:textSize="10sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.2"
+            android:textSize="10sp"
+            android:text=""
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center|right"
+            android:paddingRight="10dp"
+            android:text="velu"
+            android:textColor="@color/text_color_right"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

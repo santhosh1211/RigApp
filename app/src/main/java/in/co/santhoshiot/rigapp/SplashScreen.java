@@ -67,7 +67,7 @@ public class SplashScreen extends AppCompatActivity {
              editor.putString("emp_name", emp_name);
              editor.putString("user_type",user_type);
              editor.commit();
-             Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+             Intent intent = new Intent(SplashScreen.this, ManagerHome.class);
              startActivity(intent);
              overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
              Log.d("user Status","emp name: "+emp_name+" emp id: "+emp_id+" type: "+user_type);
@@ -78,7 +78,7 @@ public class SplashScreen extends AppCompatActivity {
              editor.putString("emp_name", emp_name);
              editor.putString("user_type",user_type);
              editor.commit();
-             Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+             Intent intent = new Intent(SplashScreen.this, OwnerHome.class);
              startActivity(intent);
              overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
              Log.d("user Status","emp name: "+emp_name+" emp id: "+emp_id+" type: "+user_type);
@@ -96,6 +96,7 @@ public class SplashScreen extends AppCompatActivity {
         int ACCESS_FINE = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);
         int ACCESS_NETWORK = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_NETWORK_STATE);
         int Read_storage = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+
         List<String> listPermissionsNeeded = new ArrayList<>();
         if (call != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(Manifest.permission.CALL_PHONE);

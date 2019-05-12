@@ -20,14 +20,14 @@
         android:paddingTop="16dp">
 
         <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="48dp"
             android:layout_marginBottom="16dp"
             android:contentDescription="@string/todo"
             android:padding="10dp"
-            app:srcCompat="@drawable/icon" />
+            app:srcCompat="@drawable/appicon" />
 
         <android.support.v7.widget.AppCompatTextView
             style="@style/Base.V7.Widget.AppCompat.Toolbar"

@@ -8,6 +8,8 @@
     <string name="shr_hint_mobile">Mobile Number</string>
     <string name="shr_hint_password">Password</string>
     <string name="todo">todo</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="friends_list">Sign up to see players and add to your friends list</string>
     <string name="log_in">LOG IN</string>
     <string name="don_account">Don\'t have account clik here</string>
@@ -18,5 +20,7 @@
     <string name="shr_error_password">Password must contain at least 4 charactera</string>
     <string name="shr_error_uname">User Name must contain at least 4 charactera</string>
     <string name="nav_header_title">Email Address</string>
+    <string name="username">UserName</string>
     <string name="password">Password</string>
+    <string name="owner_profile">Owner Profile</string>
 </resources>

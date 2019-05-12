@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#81c784</color>
-    <color name="primaryLightColor">#b2fab4</color>
-    <color name="colorPrimaryDark">#519657</color>
+    <color name="colorPrimary">#F0724A</color>
+    <color name="primaryLightColor">#ECAA96</color>
+    <color name="colorPrimaryDark">#F86E42</color>
     <color name="colorAccent">#000000</color>
 
     <color name="album_title">#4c4c4c</color>
     <color name="viewBg">#f1f5f8</color>
     <color name="black_overlay">#66000000</color>
     <color name="semitrans">#FFFFFF</color>
-
+    <color name="text_add">#f3f0ee</color>
+    <color name="text_even">#ffffff</color>
     <color name="from">#000000</color>
     <color name="subject">#111111</color>
     <color name="timestamp">#4285f4</color>
@@ -19,7 +20,8 @@
     <color name="row_activated">#e0e0e0</color>
     <color name="bg_action_mode">#757575</color>
     <color name="bg_circle_default">#666666</color>
-
+    <color name="text_color_right">#963019</color>
+    <color name="text_color_left">#000000</color>
     <color name="year">#999999</color>
     <color name="title">#222222</color>
 </resources>

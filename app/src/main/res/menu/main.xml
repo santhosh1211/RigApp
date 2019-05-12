@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home"
+            app:showAsAction="always" />
+        <item
+            android:id="@+id/pprofile"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Profile"
+            app:showAsAction="always" />
+
+
+        <item
+            android:id="@+id/addmanager"
+            android:icon="@drawable/ic_person_add_black_24dp"
+            android:title="Add Manager"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/assignmanager"
+            android:icon="@drawable/ic_person_add_black_24dp"
+            android:title="Assign Manager"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/vreport"
+            android:icon="@drawable/ic_pie_chart_outlined_black_24dp"
+            android:title="View Report"
+            app:showAsAction="always" />
+
+
+
+
+
+    </group>
+
+</menu>
+
+
+
+

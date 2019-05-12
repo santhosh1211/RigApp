@@ -18,17 +18,17 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ManagerHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class OwnerHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
     boolean isloggedin;
     public static String emp_id,emp_name,user_type;
     TextView navhead;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_manager_home);
+        setContentView(R.layout.activity_owner_home);
+
         preferences = getSharedPreferences("rigapp", MODE_PRIVATE);
         editor = preferences.edit();
         isloggedin = preferences.getBoolean("islogged", false);
@@ -37,45 +37,42 @@ public class ManagerHome extends AppCompatActivity implements NavigationView.OnN
         user_type = preferences.getString("user_type", "user_type");
         Log.d("user Status", "emp name: " + emp_name + " emp id: " + emp_id + " type: " + user_type);
         Log.d("user isloggedin", "emp status: " + isloggedin);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbars);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout1);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view11);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         View headerView = navigationView.getHeaderView(0);
-        navhead = headerView.findViewById(R.id.nh);
+        navhead=headerView.findViewById(R.id.nh);
         navhead.setText(emp_name);
         navigationView.setNavigationItemSelectedListener(this);
 
         //add this line to display menu1 when the activity is loaded
-        navigationView.setCheckedItem(R.id.nav_homess);
-        Fragment fragment = new HomeFragment();
+        navigationView.setCheckedItem(R.id.nav_home);
+        Fragment fragment = new ownerHomeFragment();
         displaySelectedFragment(fragment);
     }
-
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout1);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -88,11 +85,11 @@ public class ManagerHome extends AppCompatActivity implements NavigationView.OnN
             editor.putString("emp_id", "");
             editor.putBoolean("islogged", false);
             editor.putString("emp_name", "");
-            editor.putString("user_type", "");
+            editor.putString("user_type","");
             editor.commit();
             Intent in=new Intent(getApplicationContext(),Login.class);
             startActivity(in);
-            Toast.makeText(ManagerHome.this, "SUCCESSFULLY LOGOUT", Toast.LENGTH_SHORT).show();
+            Toast.makeText(OwnerHome.this, "SUCCESSFULLY LOGOUT", Toast.LENGTH_SHORT).show();
             System.exit(0);
 
             return true;
@@ -100,40 +97,46 @@ public class ManagerHome extends AppCompatActivity implements NavigationView.OnN
 
         return super.onOptionsItemSelected(item);
     }
-
     private void displaySelectedFragment(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.content_frame1, fragment);
+        fragmentTransaction.replace(R.id.content_frame, fragment);
         fragmentTransaction.commit();
-        ManagerHome.this.getSupportFragmentManager().beginTransaction().replace(R.id.content_frame1, fragment).commit();
+       OwnerHome.this.getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, fragment).commit();
     }
-
     public boolean onNavigationItemSelected(MenuItem item) {
 
         int id = item.getItemId();
         Fragment fragment = null;
-        if (id == R.id.nav_homess) {
-            fragment = new ManagerHomeFragment();
+        if(id == R.id.nav_home){
+            fragment = new ownerHomeFragment();
             Bundle data = new Bundle();//Use bundle to pass data
 
             displaySelectedFragment(fragment);
-        } else if (id == R.id.addemp) {
-            fragment = new AddEmployee();
+        }
+        else if(id == R.id.pprofile){
+            fragment = new ownerProfile();
             displaySelectedFragment(fragment);
-        } else if (id == R.id.areport) {
-            fragment = new NewReport();
+        }
+        else if(id == R.id.addmanager){
+            fragment = new ownerRegister();
+            displaySelectedFragment(fragment);
+        }
+        else if(id == R.id.assignmanager){
+            fragment = new AssignManager();
+            displaySelectedFragment(fragment);
+        }
+        else if(id == R.id.vreport){
+            fragment = new ownerReport();
             displaySelectedFragment(fragment);
         }
 
         if (fragment != null) {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.content_frame1, fragment);
+            fragmentTransaction.replace(R.id.content_frame, fragment);
             fragmentTransaction.commit();
         }
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout1);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-
 }

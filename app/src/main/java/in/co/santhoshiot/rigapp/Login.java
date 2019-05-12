@@ -1,5 +1,6 @@
 package in.co.santhoshiot.rigapp;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -36,6 +37,7 @@ public class Login extends AppCompatActivity {
     boolean loginstatus = false;
     String emp_id = "0";
     String emp_name = "", user_type = "";
+
     private boolean iscomplete = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +73,7 @@ public class Login extends AppCompatActivity {
             pDialog.show();
         }
 
+        @SuppressLint("WrongThread")
         @Override
         protected Void doInBackground(Void... voids) {
 
@@ -98,7 +101,7 @@ public class Login extends AppCompatActivity {
                         editor.putString("emp_name", emp_name);
                         editor.putString("user_type",user_type);
                         editor.commit();
-                        Intent intent = new Intent(Login.this, MainActivity.class);
+                        Intent intent = new Intent(Login.this, ManagerHome.class);
                         startActivity(intent);
                         overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                         finish();
@@ -110,7 +113,7 @@ public class Login extends AppCompatActivity {
                         editor.putString("emp_name", emp_name);
                         editor.putString("user_type",user_type);
                         editor.commit();
-                        Intent intent = new Intent(Login.this, MainActivity.class);
+                        Intent intent = new Intent(Login.this, OwnerHome.class);
                         startActivity(intent);
                         overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                         finish();
