@@ -1,6 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Manager Report Page"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@color/text_add"
+                        android:padding="10dip"
+                        android:text="Start Date"
+                        android:textColor="@color/text_color_left"
+                        />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@color/text_add"
+                        android:gravity="right"
+                        android:hint="11/12/12"
+                        android:inputType="text"
+                        android:maxLength="12"
+                        android:padding="10dip"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color_right"
+                        android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="End Date"
+                    android:textColor="@color/text_color_left"
+                    />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:hint="11/12/12"
+                    android:inputType="text"
+                    android:maxLength="12"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Point Number"
+                    android:textColor="@color/text_color_left"
+                    />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:hint="Point Number"
+                    android:inputType="text"
+                    android:maxLength="12"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Place"
+                    android:textColor="@color/text_color_left"
+                    />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:hint="Place"
+                    android:inputType="text"
+                    android:maxLength="12"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Advance"
+                    android:textColor="@color/text_color_left"
+                    />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:hint="Advance"
+                    android:inputType="text"
+                    android:maxLength="12"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Place"
+                    android:textColor="@color/text_color_left"
+                    />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:hint="Place"
+                    android:inputType="text"
+                    android:maxLength="12"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
