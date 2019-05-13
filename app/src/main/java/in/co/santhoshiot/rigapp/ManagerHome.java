@@ -120,8 +120,14 @@ public class ManagerHome extends AppCompatActivity implements NavigationView.OnN
         } else if (id == R.id.addemp) {
             fragment = new AddEmployee();
             displaySelectedFragment(fragment);
-        } else if (id == R.id.areport) {
+        }else if (id == R.id.assemp) {
+            fragment = new AssignEmployee();
+            displaySelectedFragment(fragment);
+        }  else if (id == R.id.areport) {
             fragment = new NewReport();
+            displaySelectedFragment(fragment);
+        }else if (id == R.id.assign) {
+            fragment = new userManagement();
             displaySelectedFragment(fragment);
         }
 

@@ -1,5 +1,6 @@
 package in.co.santhoshiot.rigapp;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -24,7 +25,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AssignManager<pubic> extends Fragment {
+public class AssignManager extends Fragment {
     NiceSpinner mgr;
     AppCompatButton assign;
     TextInputEditText vid, svid;
@@ -46,13 +47,16 @@ public class AssignManager<pubic> extends Fragment {
         policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
         StrictMode.setThreadPolicy(policy);
-        loadSpinnerData();
+      //.  loadSpinnerData();
+        new loaddataforSpinner().execute();
+
         assign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 assignManager();
             }
         });
+
         return view;
     }
 
@@ -87,9 +91,6 @@ public class AssignManager<pubic> extends Fragment {
         }
     }
 
-    public void showsnackbar(String message) {
-        Snackbar.make(layout, message, Snackbar.LENGTH_LONG).show();
-    }
 
 
     private class RemoteDataTask extends AsyncTask<String, String, Long> {
@@ -165,6 +166,44 @@ public class AssignManager<pubic> extends Fragment {
 
             }
         }
+    }
+
+    private class loaddataforSpinner extends AsyncTask<String, String, Long>{
+        protected void onPreExecute() {
+            super.onPreExecute();
+            pDialog = new ProgressDialog(getActivity());
+            pDialog.setMessage("Please Wait...");
+            pDialog.setCancelable(false);
+            pDialog.show();
+        }
+
+        @SuppressLint("WrongThread")
+        @Override
+        protected Long doInBackground(String... strings) {
+            List<String> lables = dc.LoadManager();
+
+            Log.e("list", lables.toString());
+            // Creating adapter for spinner
+            ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(),
+                    android.R.layout.simple_spinner_item, lables);
+
+            // Drop down layout style - list view with radio button
+            dataAdapter
+                    .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+            // attaching data adapter to spinner
+            mgr.setAdapter(dataAdapter);
+            return null;
+        }
+        @Override
+        protected void onPostExecute(Long result) {
+            if (pDialog.isShowing()) {
+                pDialog.cancel();
+            }
+        }
+    }
+    public void showsnackbar(String message) {
+        Snackbar.make(layout, message, Snackbar.LENGTH_LONG).show();
     }
 
 }

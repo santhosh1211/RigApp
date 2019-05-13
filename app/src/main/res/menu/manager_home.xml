@@ -17,10 +17,23 @@
             android:title="Add Employee"
             app:showAsAction="always" />
 
+
+        <item
+            android:id="@+id/assemp"
+            android:icon="@drawable/ic_web_asset_black_24dp"
+            android:title="Manage Employee"
+            app:showAsAction="always" />
+
         <item
             android:id="@+id/areport"
             android:icon="@drawable/ic_insert_chart_black_24dp"
             android:title="New Report"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/assign"
+            android:icon="@drawable/ic_assignment_black_24dp"
+            android:title="User Magement "
             app:showAsAction="always" />
 
 

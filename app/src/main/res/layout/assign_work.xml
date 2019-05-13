@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/aslayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Add Employee" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/text_add"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Rig Vehicle No"
+                android:textColor="@color/text_color_left"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/vsp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|right"
+                android:paddingLeft="10dp"
+                android:textColor="@color/text_color_right"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/text_even"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Rig Support Vehicle No"
+                android:textColor="@color/text_color_left"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/vst"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|right"
+                android:paddingRight="10dp"
+                android:textColor="@color/text_color_right"
+                android:textSize="10sp"
+                android:background="@drawable/border_set"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/text_add"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Rig Driver"
+                android:textColor="@color/text_color_left"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/rds"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|right"
+                android:paddingLeft="10dp"
+                android:textColor="@color/text_color_right"
+                android:textSize="10sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/text_even"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Support Driver"
+                android:textColor="@color/text_color_left"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/rdss"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|right"
+                android:paddingLeft="10dp"
+                android:textColor="@color/text_color_right"
+                android:textSize="10sp" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/text_add"
+        android:orientation="horizontal"
+        android:weightSum="3">
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/text_add"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Cook"
+                android:textColor="@color/text_color_left"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/cs"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|right"
+                android:paddingLeft="10dp"
+                android:textColor="@color/text_color_right"
+                android:textSize="10sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/text_even"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Labour(1)"
+                android:textColor="@color/text_color_left"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/l1s"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|right"
+                android:paddingLeft="10dp"
+                android:textColor="@color/text_color_right"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/text_add"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Labour(2)"
+                android:textColor="@color/text_color_left"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/l2s"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|right"
+                android:paddingLeft="10dp"
+                android:textColor="@color/text_color_right"
+                android:textSize="10sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/text_even"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Labour(3)"
+                android:textColor="@color/text_color_left"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/l3s"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|right"
+                android:paddingLeft="10dp"
+                android:textColor="@color/text_color_right"
+                android:textSize="10sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/text_add"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Labour(4)"
+                android:textColor="@color/text_color_left"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/l4s"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|right"
+                android:paddingLeft="10dp"
+                android:textColor="@color/text_color_right"
+                android:textSize="10sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/text_even"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Labour(5)"
+                android:textColor="@color/text_color_left"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/l5s"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|right"
+                android:paddingLeft="10dp"
+                android:textColor="@color/text_color_right"
+                android:textSize="10sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/text_even"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text=""
+                android:textColor="@color/text_color_left"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/assignemp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1.4"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:text="Add"
+                android:textColor="#fff"
+                android:textSize="10sp"
+                android:background="@color/colorPrimaryDark"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
