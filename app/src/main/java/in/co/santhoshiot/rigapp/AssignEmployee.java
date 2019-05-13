@@ -103,7 +103,7 @@ public class AssignEmployee extends Fragment {
                         Log.e("Manager id", ManagerHome.emp_id);
                         int ig = ps.executeUpdate();
                         if (ig > 0) {
-                          showsnackbar("Sucessfully Assign Employee");
+                          showsnackbar("Sucessfully Assign Employees");
                         } else {
                             showsnackbar("Failed to Assign Employee");
                         }
