@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -34,12 +34,15 @@
             android:id="@+id/idForSaving"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:orientation="vertical">
 
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:orientation="horizontal"
+
                 android:weightSum="3">
 
                 <TextView
@@ -92,10 +95,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
+
         </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/savedetail"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="35dp"
             android:layout_margin="24dp"
             android:visibility="gone"
@@ -105,5 +114,94 @@
 
     </LinearLayout>
 
+        <LinearLayout
 
-</android.support.constraint.ConstraintLayout>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/mdet"
+                style="@style/Base.V7.Widget.AppCompat.Toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Manager Details"
+                android:visibility="gone"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_bookmark1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:id="@+id/mlay"
+        android:visibility="gone"
+        android:weightSum="3">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/callmananger"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:layout_margin="10dp"
+            android:text="CALL"
+            android:drawableLeft="@drawable/ic_tablet_mac_black_24dp"
+            android:textColor="#000"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="14dp"
+
+
+            />
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/emailmananger"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:layout_margin="10dp"
+            android:text="EMAIL"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:textColor="#000"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="14dp"
+
+
+            />
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/msgmananger"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:layout_margin="10dp"
+            android:text="MESSAGE"
+            android:drawableLeft="@drawable/ic_message_black_24dp"
+
+            android:textColor="#000"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="14dp"
+
+
+            />
+    </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

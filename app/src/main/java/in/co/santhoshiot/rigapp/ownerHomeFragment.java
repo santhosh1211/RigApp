@@ -20,6 +20,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -32,16 +33,22 @@ import java.util.ArrayList;
 
 public class ownerHomeFragment extends Fragment   {
     String emp_id, emp_name;
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerView,recyclerView1;
     private ArrayList<ownerHomeModel> ownerHomeModelArrayList;
-    private LinearLayout linearLayout;
+    private ArrayList<managerDetail> mdModels;
+    private LinearLayout linearLayout,mlay;
     AppCompatButton savedetail;
+    public String mname,vso;
+    TextView mdet;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.owner_home, container, false);
         recyclerView = view.findViewById(R.id.rv_bookmark);
+        recyclerView1= view.findViewById(R.id.rv_bookmark1);
         savedetail = view.findViewById(R.id.savedetail);
         linearLayout= view.findViewById(R.id.idForSaving);
+        mlay= view.findViewById(R.id.mlay);
+        mdet= view.findViewById(R.id.mdet);
         StrictMode.ThreadPolicy policy;
         policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -56,11 +63,21 @@ public class ownerHomeFragment extends Fragment   {
             @Override
             public void onClick(View view, int position) {
                 Toast.makeText(getActivity(), ownerHomeModelArrayList.get(position).getName() + " is clicked!", Toast.LENGTH_SHORT).show();
+                mname=ownerHomeModelArrayList.get(position).getName();
+                vso=ownerHomeModelArrayList.get(position).getVno();
+                mdModels=populateList1();
+
+                managerDetailAdapter managerDetailAdapter = new managerDetailAdapter(getActivity(), mdModels);
+                recyclerView1.setAdapter(managerDetailAdapter);
+                recyclerView1.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+                mdet.setVisibility(View.VISIBLE);
+
+                mlay.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onLongClick(View view, int position) {
-                Toast.makeText(getActivity(), ownerHomeModelArrayList.get(position).getVno() + " is pressed!", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getActivity(), ownerHomeModelArrayList.get(position).getVno() + " is pressed!", Toast.LENGTH_SHORT).show();
 
             }
         }));
@@ -150,6 +167,57 @@ public class ownerHomeFragment extends Fragment   {
                     om.setVno(rs.getString("vid"));
                     om.setSvno(rs.getString("svid"));
                     om.setName(rs.getString("name"));
+                    rs.getString("vid");
+                    list.add(om);
+
+                }
+                //savedetail.setVisibility(View.VISIBLE);
+
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }finally {
+                try {
+                    statement.close();
+                    con.close();
+                    rs.close();
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }
+        catch (Exception e){
+            Log.e("ggggg",e.toString());
+
+        }
+
+        return list;
+    }
+    private ArrayList<managerDetail> populateList1() {
+        ArrayList<managerDetail> list = new ArrayList<>();
+
+        try {
+            Connection con = null;
+            ResultSet rs = null;
+            Statement statement = null;
+            String aa = "";
+
+            try{
+                con=DBconnection.sqlconn();
+                statement = con.createStatement();
+                String queryString = "SELECT asm.vid,asm.svid,tb_manager.name,tb_manager.phno,tb_manager.emailid,tb_manager.address from tbl_assignmanager asm  JOIN tb_manager on asm.manager=tb_manager.Id WHERE asm.ownerid='"+OwnerHome.emp_id+"' AND asm.vid='"+vso+"'  ";
+                rs = statement.executeQuery(queryString);
+                while(rs.next()){
+                    managerDetail om=new managerDetail();
+                    om.setVno(rs.getString("vid"));
+                    om.setSvno(rs.getString("svid"));
+                    om.setName(rs.getString("name"));
+                    om.setVnoloc("Avinashi Road,Raja Nagar,Coimbatore-642001");
+                    om.setSvnoloc("Avinashi Road,Raja Nagar,Coimbatore-642001");
+                    om.setPhno(rs.getString("phno"));
+                    om.setEmailid(rs.getString("emailid"));
+                    om.setAddress(rs.getString("address"));
                     rs.getString("vid");
                     list.add(om);
 

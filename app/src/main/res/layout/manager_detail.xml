@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/text_add"
+        android:weightSum="2">
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="Rig Vehicle"
+            android:textColor="@color/text_color_left"
+            />
+
+        <TextView
+            android:id="@+id/t_vid"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center|end"
+            android:paddingRight="5dp"
+            android:text="Rig Vehicle"
+            android:textColor="@color/text_color_right" />
+
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_even"
+            android:weightSum="2">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="Location"
+                android:textColor="@color/text_color_left" />
+
+            <TextView
+                android:id="@+id/t_vloc"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:gravity="center|end"
+                android:paddingRight="5dp"
+                android:text="Location"
+                android:maxLines="2"
+                android:textColor="@color/text_color_right" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_add"
+            android:weightSum="2">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="Rig Support Vehicle"
+                android:textColor="@color/text_color_left" />
+
+            <TextView
+                android:id="@+id/t_vsid"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="center|end"
+                android:paddingRight="5dp"
+                android:text="Rig Support Vehicle"
+                android:textColor="@color/text_color_right" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_even"
+            android:weightSum="2">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="Location"
+                android:textColor="@color/text_color_left" />
+
+            <TextView
+                android:id="@+id/t_vsloc"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:gravity="center|end"
+                android:paddingRight="5dp"
+                android:text="Location"
+                android:maxLines="2"
+                android:textColor="@color/text_color_right" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_add"
+            android:weightSum="2">
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="Manager Name"
+                android:textColor="@color/text_color_left"
+                />
+
+            <TextView
+                android:id="@+id/t_mname"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="center|end"
+                android:paddingRight="5dp"
+                android:text="Manager Name"
+                android:textColor="@color/text_color_right" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_even"
+            android:weightSum="2">
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="Manager Phono No"
+                android:textColor="@color/text_color_left" />
+
+            <TextView
+                android:id="@+id/t_phno"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="center|end"
+                android:paddingRight="5dp"
+                android:text="Manager Phono No"
+                android:textColor="@color/text_color_right" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_add"
+            android:weightSum="2">
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="Manager Email"
+                android:textColor="@color/text_color_left"
+                />
+
+            <TextView
+                android:id="@+id/t_eid"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="center|end"
+                android:paddingRight="5dp"
+                android:text="Manager Email"
+                android:textColor="@color/text_color_right" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/text_even"
+            android:weightSum="2">
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="Manager Address"
+                android:textColor="@color/text_color_left" />
+
+            <TextView
+                android:id="@+id/t_add"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="center|end"
+                android:paddingRight="5dp"
+                android:text="Manager Address"
+                android:textColor="@color/text_color_right" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
