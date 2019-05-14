@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
+        android:background="#FAF5F5"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:background="#FAF5F5"
-        android:orientation="vertical">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             style="@style/Base.V7.Widget.AppCompat.Toolbar"
@@ -29,5 +29,81 @@
             android:textSize="22sp"
             android:textStyle="bold" />
 
+        <LinearLayout
+
+            android:id="@+id/idForSaving"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/ttv_id"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_settwo"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="Rig Vehicle"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/ttsv_id"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_settwo"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="Support Vehicle "
+                    android:textColor="@color/colorAccent" />
+
+                <TextView
+                    android:id="@+id/tt_name"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@id/tv_id"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_settwo"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+
+                    android:text="Manager Name"
+                    android:textColor="@color/colorAccent" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_bookmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/savedetail"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="24dp"
+            android:visibility="gone"
+            android:textColor="@color/light_gray"
+            android:background="@color/colorPrimaryDark"
+        android:text="save"/>
+
     </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>

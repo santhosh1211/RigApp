@@ -9,6 +9,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/nrlayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -31,37 +32,39 @@
                     android:textSize="16dp"
                     android:textStyle="bold" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_weight="1"
-                        android:background="@color/text_add"
-                        android:padding="10dip"
-                        android:text="Start Date"
-                        android:textColor="@color/text_color_left"
-                        />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Start Date"
+                    android:textColor="@color/text_color_left" />
 
-                    <EditText
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_weight="1"
-                        android:background="@color/text_add"
-                        android:gravity="right"
-                        android:hint="11/12/12"
-                        android:inputType="text"
-                        android:maxLength="12"
-                        android:padding="10dip"
-                        android:singleLine="true"
-                        android:textColor="@color/text_color_right"
-                        android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/sdate"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:hint="11/12/12"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -74,10 +77,10 @@
                     android:background="@color/text_even"
                     android:padding="10dip"
                     android:text="End Date"
-                    android:textColor="@color/text_color_left"
-                    />
+                    android:textColor="@color/text_color_left" />
 
-                <EditText
+                <TextView
+                    android:id="@+id/edate"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -85,7 +88,7 @@
                     android:gravity="right"
                     android:hint="11/12/12"
                     android:inputType="text"
-                    android:maxLength="12"
+                    android:maxLength="25"
                     android:padding="10dip"
                     android:singleLine="true"
                     android:textColor="@color/text_color_right"
@@ -93,6 +96,7 @@
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -105,10 +109,10 @@
                     android:background="@color/text_add"
                     android:padding="10dip"
                     android:text="Point Number"
-                    android:textColor="@color/text_color_left"
-                    />
+                    android:textColor="@color/text_color_left" />
 
                 <EditText
+                    android:id="@+id/pno"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -116,7 +120,7 @@
                     android:gravity="right"
                     android:hint="Point Number"
                     android:inputType="text"
-                    android:maxLength="12"
+                    android:maxLength="25"
                     android:padding="10dip"
                     android:singleLine="true"
                     android:textColor="@color/text_color_right"
@@ -124,6 +128,7 @@
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -136,10 +141,10 @@
                     android:background="@color/text_even"
                     android:padding="10dip"
                     android:text="Place"
-                    android:textColor="@color/text_color_left"
-                    />
+                    android:textColor="@color/text_color_left" />
 
                 <EditText
+                    android:id="@+id/place"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -147,7 +152,7 @@
                     android:gravity="right"
                     android:hint="Place"
                     android:inputType="text"
-                    android:maxLength="12"
+                    android:maxLength="25"
                     android:padding="10dip"
                     android:singleLine="true"
                     android:textColor="@color/text_color_right"
@@ -155,6 +160,7 @@
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -167,10 +173,10 @@
                     android:background="@color/text_add"
                     android:padding="10dip"
                     android:text="Advance"
-                    android:textColor="@color/text_color_left"
-                    />
+                    android:textColor="@color/text_color_left" />
 
                 <EditText
+                    android:id="@+id/advance"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -178,7 +184,198 @@
                     android:gravity="right"
                     android:hint="Advance"
                     android:inputType="text"
-                    android:maxLength="12"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Agent Name"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/aname"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:hint="Agent Name"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Agent Mobile"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/aphn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:hint="Agent Mobile"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Sub-Agent Name"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/saname"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:hint="Sub-Agent Name"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Sub-Agent Mobile"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/samno"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:hint="Sub-Agent Mobile"
+                    android:inputType="text"
+                    android:maxLength="10"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Start Time"
+                    android:textColor="@color/text_color_left" />
+
+                <TextView
+                    android:id="@+id/stime"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:hint="Start Time"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Close Time"
+                    android:textColor="@color/text_color_left" />
+
+                <TextView
+                    android:id="@+id/etime"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:hint="Close Time"
+                    android:inputType="text"
+                    android:maxLength="25"
                     android:padding="10dip"
                     android:singleLine="true"
                     android:textColor="@color/text_color_right"
@@ -197,19 +394,19 @@
                     android:layout_weight="1"
                     android:background="@color/text_even"
                     android:padding="10dip"
-                    android:text="Place"
-                    android:textColor="@color/text_color_left"
-                    />
+                    android:text="Total Depth"
+                    android:textColor="@color/text_color_left" />
 
                 <EditText
+                    android:id="@+id/tdepth"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:background="@color/text_even"
                     android:gravity="right"
-                    android:hint="Place"
+                    android:hint="Total Depth"
                     android:inputType="text"
-                    android:maxLength="12"
+                    android:maxLength="25"
                     android:padding="10dip"
                     android:singleLine="true"
                     android:textColor="@color/text_color_right"
@@ -217,7 +414,481 @@
 
 
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Diesel"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/diesel"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:hint="Diesel"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Start RPM"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/srmp"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:hint="Start RPM"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Close RPM"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/crmp"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:hint="Close RPM"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Total RPM"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/trmp"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:hint="Total RPM"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Drill"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/drill"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:hint="Drill"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Driller Name"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/drillname"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:hint="Driller Name"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Manager Name"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/mname"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:hint="Manager Name"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Hammer Balance"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/hbalance"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:hint="Hammer Balance"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Bit Balance"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/bitbalance"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:hint="Bit Balance"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Diesel Balance"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/dieselbalance"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:hint="Diesel Balance"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Total"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/total"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:hint="Total"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Total Advance"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/totaladvance"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:hint="Total Advance"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Total Balance"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/totalbalance"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:hint="Total Balance"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+                      <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Remarks"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/remarks"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:hint="Remarks"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:padding="10dip"
+                    android:textColor="@color/text_color_left" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/rsummit"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:hint="Submit"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="#fff"
+                    android:background="@color/colorPrimaryDark"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+
+
         </LinearLayout>
+
     </android.support.constraint.ConstraintLayout>
 
 </ScrollView>

@@ -32,6 +32,7 @@ public class SplashScreen extends AppCompatActivity {
         user_type = preferences.getString("user_type", "user_type");
         Log.d("user Status", "emp name: " + emp_name + " emp id: " + emp_id + " type: " + user_type);
         Log.d("user isloggedin", "emp status: " + isloggedin);
+        checkPermission();
         if (isloggedin) {
             Log.d("isloggedin", ""+isloggedin);
             new Handler().postDelayed(new Runnable() {
@@ -51,6 +52,7 @@ public class SplashScreen extends AppCompatActivity {
             }, 2000);
         }
         if (!isloggedin) {
+
             Intent intent = new Intent(SplashScreen.this, Login.class);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
@@ -60,6 +62,11 @@ public class SplashScreen extends AppCompatActivity {
 
 
     private void startactivity() {
+
+
+
+
+
         Log.d("startactivity", "come" );
          if(user_type.equalsIgnoreCase("manager")){
 
