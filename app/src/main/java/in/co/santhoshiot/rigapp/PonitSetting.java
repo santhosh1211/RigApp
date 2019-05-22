@@ -34,7 +34,7 @@ public class PonitSetting extends Fragment {
     String[]  array1,array2;
     int[] a1,a2;
     String s1,s2;
-    int v1=0,v2=0;
+    int v1=0,v2=0,v3=0;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.point_setting, container, false);
