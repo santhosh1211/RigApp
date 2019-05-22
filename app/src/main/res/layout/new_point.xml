@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/PNlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Rig Point Entry"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Total Feet"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/tfeet"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:hint="0"
+                    android:inputType="number"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Starting RPM"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/srpm"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Closing RPM"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/crpm"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="BORE BATA"
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/bb"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="PAID "
+                    android:textColor="@color/text_color_left" />
+
+                <EditText
+                    android:id="@+id/paid"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/text_even"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/nrsummit"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:padding="5dip"
+                    android:singleLine="true"
+                    android:text="Submit"
+                    android:textAllCaps="true"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Total Amount"
+                    android:textColor="@color/text_color_left" />
+
+                <TextView
+                    android:id="@+id/ttamout"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Total Rpm"
+                    android:textColor="@color/text_color_left" />
+
+                <TextView
+                    android:id="@+id/trpm"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Avg.RPM"
+                    android:textColor="@color/text_color_left" />
+
+                <TextView
+                    android:id="@+id/arpm"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Total Deisel"
+                    android:textColor="@color/text_color_left" />
+
+                <TextView
+                    android:id="@+id/td"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Total Deisel Amount"
+                    android:textColor="@color/text_color_left" />
+
+                <TextView
+                    android:id="@+id/tda"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="BIT /HAMMER/11"
+                    android:textColor="@color/text_color_left" />
+
+                <TextView
+                    android:id="@+id/bh11"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+
+                    android:inputType="numberDecimal"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="CASING 80"
+                    android:textColor="@color/text_color_left" />
+
+                <TextView
+                    android:id="@+id/c80"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+
+                    android:inputType="numberDecimal"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Total"
+                    android:textColor="@color/text_color_left" />
+
+                <TextView
+                    android:id="@+id/ctotal"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+
+                    android:inputType="numberDecimal"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:padding="10dip"
+                    android:text="Margin"
+                    android:textColor="@color/text_color_left" />
+
+                <TextView
+                    android:id="@+id/mar"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="right"
+
+                    android:inputType="numberDecimal"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:padding="10dip"
+                    android:text="Credit"
+                    android:textColor="@color/text_color_left" />
+
+                <TextView
+                    android:id="@+id/crdt"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="right"
+
+                    android:inputType="numberDecimal"
+                    android:maxLength="25"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_right"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -24,7 +24,8 @@ public class DBconnection {
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
                       conn= DriverManager.getConnection(
-                    "jdbc:mysql://santhoshiot.co.in:3306/restdb","sandydb1234","sandydb1234");
+                    "jdbc:mysql://103.207.4.72:3306/restdb","sandydb1234","sandydb1234");
+            Log.e("gggg","connect");
         }catch (Exception e){
             Log.e("gggg",e.toString());
         }
@@ -44,8 +45,8 @@ public class DBconnection {
                 con=DBconnection.sqlconn();
                 if (con!=null) {
                     statement = con.createStatement();
-                    String queryString = "select * from tb_manager where AddOwner='"+OwnerHome.emp_id+"' ";
-                    Log.e("query","select * from tb_manager where AddOwner='"+OwnerHome.emp_id+"'");
+                    String queryString = "select Name from tb_manager where AddOwner='"+OwnerHome.emp_id+"' ";
+                    Log.e("query","select Name from tb_manager where AddOwner='"+OwnerHome.emp_id+"'");
                     rs = statement.executeQuery(queryString);
                     while(rs.next()){
 

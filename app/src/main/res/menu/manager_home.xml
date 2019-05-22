@@ -41,6 +41,62 @@
 
 
     </group>
+    <item android:title="POINT ENTRY">
+        <menu>
+            <item
+                android:id="@+id/npoint"
+                android:icon="@drawable/ic_settings_ethernet_black_24dp"
+                android:title="New Point" />
+            <item
+                android:id="@+id/report"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="Reports" />
+            <item
+                android:id="@+id/psetting"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="Point Setting" />
+        </menu>
+    </item>
+    <!--<item android:title="BIT">-->
+        <!--<menu>-->
+                       <!--<item-->
+                <!--android:id="@+id/ssetting"-->
+                <!--android:icon="@drawable/ic_settings_black_24dp"-->
+                <!--android:title="Bit Setting" />-->
+        <!--</menu>-->
+    <!--</item>-->
+    <!--<item android:title="HAMMER">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/hsetting"-->
+                <!--android:icon="@drawable/ic_settings_black_24dp"-->
+                <!--android:title="Bit Setting" />-->
+        <!--</menu>-->
+    <!--</item>-->
+    <!--<item android:title="DIESEL">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/Dsetting"-->
+                <!--android:icon="@drawable/ic_settings_black_24dp"-->
+                <!--android:title="Bit Setting" />-->
+        <!--</menu>-->
+    <!--</item>-->
+    <!--<item android:title="EXPANSES">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/Esetting"-->
+                <!--android:icon="@drawable/ic_settings_black_24dp"-->
+                <!--android:title="Bit Setting" />-->
+        <!--</menu>-->
+    <!--</item>-->
+    <!--<item android:title="MAINTENANSE">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/Msetting"-->
+                <!--android:icon="@drawable/ic_settings_black_24dp"-->
+                <!--android:title="Bit Setting" />-->
+        <!--</menu>-->
+    <!--</item>-->
 
 </menu>
 

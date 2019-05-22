@@ -6,8 +6,8 @@ android {
         applicationId "in.co.santhoshiot.rigapp"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -33,6 +33,13 @@ dependencies {
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     // spinner
     implementation 'com.github.arcadefire:nice-spinner:1.4'
-    implementation files('libs/mysql-connector.jar')
+
     implementation 'android.arch.work:work-runtime:1.0.0-alpha08'
+    implementation files('libs\\mysql-connector-java-5.1.47.jar')
+
+
+    //api
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
 }

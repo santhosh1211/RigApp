@@ -25,6 +25,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.transform.Result;
+
 public class AssignManager extends Fragment {
     NiceSpinner mgr;
     AppCompatButton assign;
@@ -33,7 +35,7 @@ public class AssignManager extends Fragment {
     private LinearLayout layout;
     private ProgressDialog pDialog;
     boolean registerstatus = false;
-
+    List<String> lables;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.assign_manager, container, false);
@@ -168,40 +170,85 @@ public class AssignManager extends Fragment {
         }
     }
 
-    private class loaddataforSpinner extends AsyncTask<String, String, Long>{
-        protected void onPreExecute() {
+//    private class loaddataforSpinner extends AsyncTask<String, String, Long>  {
+//        protected void onPreExecute() {
+//            super.onPreExecute();
+//            pDialog = new ProgressDialog(getActivity());
+//            pDialog.setMessage("Please Wait...");
+//            pDialog.setCancelable(false);
+//            pDialog.show();
+//        }
+//
+//        @SuppressLint("WrongThread")
+//        @Override
+//        protected Long doInBackground(String... strings) {
+//            List<String> lables = dc.LoadManager();
+//
+//            Log.e("list", lables.toString());
+//            // Creating adapter for spinner
+//            ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(),
+//                    R.layout.spinner_itemrigt, lables);
+//
+//            // Drop down layout style - list view with radio button
+//            dataAdapter
+//                    .setDropDownViewResource(R.layout.spinner_itemrigt);
+//
+//            // attaching data adapter to spinner
+//            mgr.setAdapter(dataAdapter);
+//            return null;
+//        }
+//
+//        protected void onPostExecute(Result result) {
+//            if (pDialog.isShowing()) {
+//                pDialog.cancel();
+//            }
+//        }
+//    }
+    private class loaddataforSpinner extends AsyncTask<String, Void, Boolean> {
+    private ProgressDialog dialog = new ProgressDialog(getActivity());
+
+    protected void onPreExecute() {
             super.onPreExecute();
-            pDialog = new ProgressDialog(getActivity());
-            pDialog.setMessage("Please Wait...");
-            pDialog.setCancelable(false);
-            pDialog.show();
+        this.dialog.setMessage("Please wait");
+        this.dialog.show();
         }
 
-        @SuppressLint("WrongThread")
         @Override
-        protected Long doInBackground(String... strings) {
-            List<String> lables = dc.LoadManager();
+        protected Boolean doInBackground(String... strings) {
 
-            Log.e("list", lables.toString());
-            // Creating adapter for spinner
+            try {
+
+                lables= dc.LoadManager();
+                return true;
+            } catch (Exception e) {
+                Log.e("tag", "error", e);
+                return false;
+            }
+        }
+
+        protected void onPostExecute(final Boolean success) {
+            if (dialog.isShowing()) {
+                dialog.dismiss();
+            }
+
+//            List<String> lables = dc.LoadManager();
+//
+//            Log.e("list", lables.toString());
+//            // Creating adapter for spinner
             ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(),
-                    android.R.layout.simple_spinner_item, lables);
+                    R.layout.spinner_itemrigt, lables);
 
             // Drop down layout style - list view with radio button
             dataAdapter
-                    .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    .setDropDownViewResource(R.layout.spinner_itemrigt);
 
             // attaching data adapter to spinner
             mgr.setAdapter(dataAdapter);
-            return null;
-        }
-        @Override
-        protected void onPostExecute(Long result) {
-            if (pDialog.isShowing()) {
-                pDialog.cancel();
-            }
         }
     }
+
+
+
     public void showsnackbar(String message) {
         Snackbar.make(layout, message, Snackbar.LENGTH_LONG).show();
     }

@@ -43,12 +43,12 @@ public class NewReport extends Fragment {
         policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
         StrictMode.setThreadPolicy(policy);
-        layout=view.findViewById(R.id.nrlayout);
+        layout=view.findViewById(R.id.nplayout);
         rsubmit=view.findViewById(R.id.rsummit);
         stime=view.findViewById(R.id.stime);
         etime=view.findViewById(R.id.etime);
-        sdate=view.findViewById(R.id.sdate);
-        edate=view.findViewById(R.id.edate);
+        sdate=view.findViewById(R.id.crpm);
+        edate=view.findViewById(R.id.srpm);
         pno=view.findViewById(R.id.pno);
         place=view.findViewById(R.id.place);
         advance=view.findViewById(R.id.advance);

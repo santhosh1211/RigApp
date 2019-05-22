@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="my_profile">My Profile</string-array>
+    <string-array name="income_slip">Income Sleep</string-array>
+    <string-array name="federal_deduction">federal deduction</string-array>
+    <string-array name="provincial_credit">provincial_credit</string-array>
+    <string-array name="expenses">Expense</string-array>
+    <string-array name="nav_drawer_items">n item</string-array>
+    <string-array name="dash_board">dash_board</string-array>
+    <string-array name="before_you_file">before_you_file</string-array>
+</resources>

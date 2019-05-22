@@ -130,7 +130,14 @@ public class ManagerHome extends AppCompatActivity implements NavigationView.OnN
             fragment = new userManagement();
             displaySelectedFragment(fragment);
         }
-
+        else if (id == R.id.psetting) {
+            fragment = new PonitSetting();
+            displaySelectedFragment(fragment);
+        }
+        else if (id == R.id.npoint) {
+            fragment = new NewPoint();
+            displaySelectedFragment(fragment);
+        }
         if (fragment != null) {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.content_frame1, fragment);
