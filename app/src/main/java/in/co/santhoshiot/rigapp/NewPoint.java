@@ -23,7 +23,7 @@ import java.util.Arrays;
 
 public class NewPoint extends Fragment {
     AppCompatButton submit;
-    EditText e1,e2,e3,e4,e5;
+    EditText e1,e2,e3,e4,e5,e6,e7,e8;
     TextView t1,t2,t3,t4,t5,t6,t7,t8,t9,t10;
     private LinearLayout layout;
     private ProgressDialog pDialog;
@@ -42,6 +42,11 @@ public class NewPoint extends Fragment {
         e3=view.findViewById(R.id.crpm);
         e4=view.findViewById(R.id.bb);
         e5=view.findViewById(R.id.paid);
+        e6=view.findViewById(R.id.wld);
+        e7=view.findViewById(R.id.cpe);
+        e8=view.findViewById(R.id.dst);
+
+
         t1=(TextView) view.findViewById(R.id.ttamout);
         t2=view.findViewById(R.id.trpm);
         t3=view.findViewById(R.id.arpm);
@@ -165,33 +170,6 @@ public class NewPoint extends Fragment {
 
 
 
-
-
-
-
-
-
-//                    for (int i  = 0, j = 1; i < array1.length && j == 1; i++) {
-//                        Log.e("Edit text:", e1.getText().toString()+"");
-//
-//                        if(Integer.parseInt(array1[i] )> Integer.parseInt(e1.getText().toString())){
-//                             result = Integer.parseInt(array1[i]) - Integer.parseInt(array1[i]) * Integer.parseInt(array2[i]);
-//                            Log.e("result:", result+"");
-//                            result1 = result1 + result;
-//                            Log.e("result1:", result1+"");
-//                            j = 1;
-//                        }else{
-//                            result =  Integer.parseInt(e1.getText().toString()) - Integer.parseInt(array1[i]) * Integer.parseInt(array2[i]);
-//                            Log.e("result:", result+"");
-//                            result1 = result1 + result;
-//                            Log.e("result1:", result1+"");
-//                            j=0;
-//
-//                        }
-//
-//
-//
-//                    }
                     t1.setText("");
                     t1.setText(result1+"");
                     result = 0;
