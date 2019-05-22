@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -30,7 +31,7 @@ public class NewPoint extends Fragment {
     boolean registerstatus = false;
     String[] array1, array2;
     int[] a1, a2;
-    String s1, s2,s3;
+    String s1, s2,s3,s4,s5,s6,s7;
     int v1=0,v2=0;
     long  result = 0,result1 = 0,rr=55;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -73,7 +74,7 @@ public class NewPoint extends Fragment {
 
     }
 
-    private class RemoteDataTask1 extends AsyncTask<Void, Void, Void> {
+    private class RemoteDataTask2 extends AsyncTask<Void, Void, Void> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -102,6 +103,124 @@ public class NewPoint extends Fragment {
         }
     }
 
+    private class RemoteDataTask1 extends AsyncTask<String, Void, Boolean> {
+        private ProgressDialog dialog = new ProgressDialog(getActivity());
+
+        protected void onPreExecute() {
+            super.onPreExecute();
+            this.dialog.setMessage("Please wait");
+            this.dialog.show();
+        }
+
+        @Override
+        protected Boolean doInBackground(String... strings) {
+
+            try {
+
+                readdata();
+                return true;
+            } catch (Exception e) {
+                Log.e("tag", "error", e);
+                return false;
+            }
+        }
+
+        protected void onPostExecute(final Boolean success) {
+            if (dialog.isShowing()) {
+                dialog.dismiss();
+            }
+            settextview();
+        }
+    }
+
+    private void settextview() {
+        if(s1 != null && s2 != null) {
+            array1 = s1.split(",");
+            array2 = s2.split(",");
+            Log.e("array1:", Arrays.deepToString(array1));
+            Log.e("array2:", Arrays.deepToString(array2));
+        }
+
+
+        for (int i = 1; i < array1.length; i++){
+
+            if( i == 1){
+                if(Integer.parseInt(e1.getText().toString()) > Integer.parseInt(array1[1] )){
+                    result = Integer.parseInt(array1[1]) * Integer.parseInt(array2[1]);
+                    result1 = result ;
+                    // Log.e("result4: ",""+result1);
+                }else{
+                    result = Integer.parseInt(e1.getText().toString()) * Integer.parseInt(array2[1]);
+                    result1 = result ;
+                    //     Log.e("result5: ",""+result1);
+                    break;
+                }
+            }else{
+
+                //Log.e("result1:",result1);
+                //  Log.e("result1: ",""+result1);
+                if(Integer.parseInt(e1.getText().toString()) > Integer.parseInt(array1[i] )) {
+
+                    result = (Integer.parseInt(array1[i]) - Integer.parseInt(array1[i-1])) * Integer.parseInt(array2[i]);
+
+                    result1 = result + result1;
+                    // Log.e("result2: ",""+result1);
+
+                }else{
+
+                    result = (Integer.parseInt(e1.getText().toString()) - Integer.parseInt(array1[i-1])) * Integer.parseInt(array2[i]);
+                    result1 = result + result1;
+                    // Log.e("result3: ",""+result1);
+                    break;
+                }
+
+
+            }
+        }
+
+
+
+
+        t1.setText("");
+        t1.setText(result1+"");
+        result = 0;
+        result1 = 0;
+
+        double trpm=Double.parseDouble(e3.getText().toString())-Double.parseDouble(e2.getText().toString());
+        t2.setText("");
+        t2.setText(trpm+"");
+        double avg=Double.parseDouble(e1.getText().toString())/trpm;
+        t3.setText("");
+        t3.setText((int)avg+"");
+
+        double ttd=trpm*Double.parseDouble(s3);
+        t4.setText("");
+        t4.setText(ttd+"");
+
+        double ttda=trpm*Double.parseDouble(s3)*65;
+        t5.setText("");
+        t5.setText(ttda+"");
+        double tbh11=Double.parseDouble(e1.getText().toString())*14;
+        t6.setText("");
+        t6.setText((int)tbh11+"");
+        t7.setText("0");
+        t8.setText(""+((tbh11+ttda)));
+
+        t9.setText("");
+        t9.setText(""+(Double.parseDouble(e5.getText().toString())-(tbh11+ttda)));
+
+
+        double cr=Double.parseDouble(t1.getText().toString())+
+                (Double.parseDouble(e6.getText().toString())*Double.parseDouble(s4))+
+                (Double.parseDouble(e7.getText().toString())*Double.parseDouble(s5))+
+                (Double.parseDouble(e4.getText().toString())*Double.parseDouble(s6))+
+                (Double.parseDouble(e8.getText().toString())*Double.parseDouble(s7));
+
+        t10.setText("");
+        t10.setText(""+cr);
+    }
+
+
     private void readdata() {
         try {
             Connection con1 = null;
@@ -119,90 +238,98 @@ public class NewPoint extends Fragment {
                         s1=rs1.getString("distance");
                         s2=rs1.getString("rate");
                         s3=rs1.getString("deiselrate");
+                        s4=rs1.getString("weldingrate");
+                        s5=rs1.getString("casingpiperate");
+                        s6=rs1.getString("borebatarate");
+                        s7=rs1.getString("bit_hammer_11");
                         Log.e("s1:",s1);
                         Log.e("s2:",s2);
 
                     }
-                    if(s1 != null && s2 != null) {
-                        array1 = s1.split(",");
-                        array2 = s2.split(",");
-                        Log.e("array1:", Arrays.deepToString(array1));
-                        Log.e("array2:", Arrays.deepToString(array2));
-                    }
-
-
-                    for (int i = 1; i < array1.length; i++){
-
-                            if( i == 1){
-                                if(Integer.parseInt(e1.getText().toString()) > Integer.parseInt(array1[1] )){
-                                    result = Integer.parseInt(array1[1]) * Integer.parseInt(array2[1]);
-                                    result1 = result ;
-                                   // Log.e("result4: ",""+result1);
-                                }else{
-                                    result = Integer.parseInt(e1.getText().toString()) * Integer.parseInt(array2[1]);
-                                    result1 = result ;
-                               //     Log.e("result5: ",""+result1);
-                                    break;
-                                }
-                            }else{
-
-                                //Log.e("result1:",result1);
-                              //  Log.e("result1: ",""+result1);
-                                if(Integer.parseInt(e1.getText().toString()) > Integer.parseInt(array1[i] )) {
-
-                                    result = (Integer.parseInt(array1[i]) - Integer.parseInt(array1[i-1])) * Integer.parseInt(array2[i]);
-
-                                    result1 = result + result1;
-                                   // Log.e("result2: ",""+result1);
-
-                                }else{
-
-                                    result = (Integer.parseInt(e1.getText().toString()) - Integer.parseInt(array1[i-1])) * Integer.parseInt(array2[i]);
-                                    result1 = result + result1;
-                                   // Log.e("result3: ",""+result1);
-                                    break;
-                                }
-
-
-                            }
-                    }
-
-
-
-
-                    t1.setText("");
-                    t1.setText(result1+"");
-                    result = 0;
-                    result1 = 0;
-
-                    double trpm=Double.parseDouble(e3.getText().toString())-Double.parseDouble(e2.getText().toString());
-                    t2.setText("");
-                    t2.setText(trpm+"");
-                    double avg=Double.parseDouble(e1.getText().toString())/trpm;
-                    t3.setText("");
-                    t3.setText((int)avg+"");
-
-                    double ttd=trpm*Double.parseDouble(s3);
-                    t4.setText("");
-                    t4.setText(ttd+"");
-
-                    double ttda=trpm*Double.parseDouble(s3)*65;
-                    t5.setText("");
-                    t5.setText(ttda+"");
-                    double tbh11=Double.parseDouble(e1.getText().toString())*14;
-                    t6.setText("");
-                    t6.setText((int)tbh11+"");
-                    t7.setText("0");
-                    t8.setText(""+((tbh11+ttda)));
-
-                    t9.setText("");
-                    t9.setText(""+(Double.parseDouble(e5.getText().toString())-(tbh11+ttda)));
-
-                    t10.setText("");
-                    t10.setText("0");
-
-
-
+//                    if(s1 != null && s2 != null) {
+//                        array1 = s1.split(",");
+//                        array2 = s2.split(",");
+//                        Log.e("array1:", Arrays.deepToString(array1));
+//                        Log.e("array2:", Arrays.deepToString(array2));
+//                    }
+//
+//
+//                    for (int i = 1; i < array1.length; i++){
+//
+//                            if( i == 1){
+//                                if(Integer.parseInt(e1.getText().toString()) > Integer.parseInt(array1[1] )){
+//                                    result = Integer.parseInt(array1[1]) * Integer.parseInt(array2[1]);
+//                                    result1 = result ;
+//                                   // Log.e("result4: ",""+result1);
+//                                }else{
+//                                    result = Integer.parseInt(e1.getText().toString()) * Integer.parseInt(array2[1]);
+//                                    result1 = result ;
+//                               //     Log.e("result5: ",""+result1);
+//                                    break;
+//                                }
+//                            }else{
+//
+//                                //Log.e("result1:",result1);
+//                              //  Log.e("result1: ",""+result1);
+//                                if(Integer.parseInt(e1.getText().toString()) > Integer.parseInt(array1[i] )) {
+//
+//                                    result = (Integer.parseInt(array1[i]) - Integer.parseInt(array1[i-1])) * Integer.parseInt(array2[i]);
+//
+//                                    result1 = result + result1;
+//                                   // Log.e("result2: ",""+result1);
+//
+//                                }else{
+//
+//                                    result = (Integer.parseInt(e1.getText().toString()) - Integer.parseInt(array1[i-1])) * Integer.parseInt(array2[i]);
+//                                    result1 = result + result1;
+//                                   // Log.e("result3: ",""+result1);
+//                                    break;
+//                                }
+//
+//
+//                            }
+//                    }
+//
+//
+//
+//
+//                    t1.setText("");
+//                    t1.setText(result1+"");
+//                    result = 0;
+//                    result1 = 0;
+//
+//                    double trpm=Double.parseDouble(e3.getText().toString())-Double.parseDouble(e2.getText().toString());
+//                    t2.setText("");
+//                    t2.setText(trpm+"");
+//                    double avg=Double.parseDouble(e1.getText().toString())/trpm;
+//                    t3.setText("");
+//                    t3.setText((int)avg+"");
+//
+//                    double ttd=trpm*Double.parseDouble(s3);
+//                    t4.setText("");
+//                    t4.setText(ttd+"");
+//
+//                    double ttda=trpm*Double.parseDouble(s3)*65;
+//                    t5.setText("");
+//                    t5.setText(ttda+"");
+//                    double tbh11=Double.parseDouble(e1.getText().toString())*14;
+//                    t6.setText("");
+//                    t6.setText((int)tbh11+"");
+//                    t7.setText("0");
+//                    t8.setText(""+((tbh11+ttda)));
+//
+//                    t9.setText("");
+//                    t9.setText(""+(Double.parseDouble(e5.getText().toString())-(tbh11+ttda)));
+//
+//
+//                    double cr=Double.parseDouble(t1.getText().toString())+
+//                            (Double.parseDouble(e6.getText().toString())*Double.parseDouble(s4))+
+//                            (Double.parseDouble(e7.getText().toString())*Double.parseDouble(s5))+
+//                            (Double.parseDouble(e4.getText().toString())*Double.parseDouble(s6))+
+//                            (Double.parseDouble(e8.getText().toString())*Double.parseDouble(s7));
+//
+//                    t10.setText("");
+//                    t10.setText(""+cr);
                 }
                 else{
                     showsnackbar("Connection Null");

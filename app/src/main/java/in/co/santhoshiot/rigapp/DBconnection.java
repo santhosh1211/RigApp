@@ -22,9 +22,15 @@ public class DBconnection {
     public static Connection sqlconn(){
         Connection conn = null;
         try {
+
+
+
             Class.forName("com.mysql.jdbc.Driver").newInstance();
                       conn= DriverManager.getConnection(
-                    "jdbc:mysql://103.207.4.72:3306/restdb","sandydb1234","sandydb1234");
+                    "jdbc:mysql://103.207.4.72:3306/restdb"+
+                              "?verifyServerCertificate=false"+
+                                      "&useSSL=true"+
+                                      "&requireSSL=true","sandydb1234","sandydb1234");
             Log.e("gggg","connect");
         }catch (Exception e){
             Log.e("gggg",e.toString());

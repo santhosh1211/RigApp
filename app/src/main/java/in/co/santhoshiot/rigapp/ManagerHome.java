@@ -40,7 +40,7 @@ public class ManagerHome extends AppCompatActivity implements NavigationView.OnN
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbars);
         setSupportActionBar(toolbar);
 
-
+        toolbar.setTitleTextColor(0xFFFFFFFF);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout1);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -102,6 +102,9 @@ public class ManagerHome extends AppCompatActivity implements NavigationView.OnN
     }
 
     private void displaySelectedFragment(Fragment fragment) {
+
+
+
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.content_frame1, fragment);
         fragmentTransaction.commit();
@@ -112,6 +115,7 @@ public class ManagerHome extends AppCompatActivity implements NavigationView.OnN
 
         int id = item.getItemId();
         Fragment fragment = null;
+
         if (id == R.id.nav_homess) {
             fragment = new ManagerHomeFragment();
             Bundle data = new Bundle();//Use bundle to pass data
@@ -138,11 +142,16 @@ public class ManagerHome extends AppCompatActivity implements NavigationView.OnN
             fragment = new NewPoint();
             displaySelectedFragment(fragment);
         }
+         else{
+            fragment = new PonitSetting();
+            displaySelectedFragment(fragment);
+        }
         if (fragment != null) {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.content_frame1, fragment);
             fragmentTransaction.commit();
         }
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout1);
         drawer.closeDrawer(GravityCompat.START);
         return true;

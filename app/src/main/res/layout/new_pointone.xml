@@ -253,7 +253,10 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="@color/text_even"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:text="Distance"
+
+                    android:textColor="@color/text_color_left">
 
                     <TextView
                         android:id="@+id/t1"
@@ -264,8 +267,7 @@
                         android:gravity="center"
                         android:text="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -275,22 +277,20 @@
                         android:gravity="center"
                         android:text="-"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/e1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
+                        android:background="@drawable/border_set"
                         android:gravity="center"
-                        android:hint="100"
-                        android:text="100"
+                        android:hint="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -300,7 +300,9 @@
                     android:layout_gravity="center"
                     android:layout_weight="0.5"
                     android:background="@drawable/border_set"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
 
                     <TextView
                         android:layout_width="0dp"
@@ -323,7 +325,8 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="@color/text_even"
-                    android:gravity="center">
+                    android:gravity="center"
+                    >
 
                     <EditText
                         android:id="@+id/r1"
@@ -355,7 +358,8 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="@color/text_add"
-                    android:gravity="center">
+                    android:gravity="center"
+                    >
 
                     <TextView
                         android:id="@+id/t2"
@@ -364,10 +368,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="100"
+                        android:text="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -377,22 +380,20 @@
                         android:gravity="center"
                         android:text="-"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/e2"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
+                        android:background="@drawable/border_set"
                         android:gravity="center"
-                        android:text="200"
+                        android:hint="000"
                         android:textColor="@color/text_color_left"
-
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -467,10 +468,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="200"
+                        android:text="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -480,21 +480,20 @@
                         android:gravity="center"
                         android:text="-"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/e3"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
+                        android:background="@drawable/border_set"
                         android:gravity="center"
-                        android:text="300"
+                        android:hint="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -573,10 +572,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="300"
+                        android:text="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -586,21 +584,20 @@
                         android:gravity="center"
                         android:text="-"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/e4"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
+                        android:background="@drawable/border_set"
                         android:gravity="center"
-                        android:text="400"
+                        android:hint="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -677,10 +674,10 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="400"
+                        android:text="000"
+
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -690,21 +687,20 @@
                         android:gravity="center"
                         android:text="-"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/e5"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
+                        android:background="@drawable/border_set"
                         android:gravity="center"
-                        android:text="500"
+                        android:hint="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -785,10 +781,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="500"
+                        android:text="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -800,18 +795,18 @@
                         android:textColor="@color/text_color_left"
                         android:textSize="12dp" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/e6"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
                         android:layout_weight="1"
+                        android:background="@drawable/border_set"
                         android:gravity="center"
-                        android:text="600"
+                        android:hint="000"
+                        android:layout_margin="5dp"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -892,10 +887,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="600"
+                        android:text="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -905,21 +899,20 @@
                         android:gravity="center"
                         android:text="-"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/e7"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
                         android:layout_weight="1"
+                        android:background="@drawable/border_set"
                         android:gravity="center"
-                        android:text="700"
+                        android:hint="000"
+                        android:layout_margin="5dp"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -1000,10 +993,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="700"
+                        android:text="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -1013,21 +1005,20 @@
                         android:gravity="center"
                         android:text="-"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/e8"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
                         android:layout_weight="1"
+                        android:background="@drawable/border_set"
                         android:gravity="center"
-                        android:text="800"
+                        android:hint="000"
+                        android:layout_margin="5dp"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -1037,7 +1028,9 @@
                     android:layout_gravity="center"
                     android:layout_weight="0.5"
                     android:background="@color/text_add"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
 
                     <TextView
                         android:layout_width="0dp"
@@ -1095,7 +1088,9 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="@color/text_even"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
 
                     <TextView
                         android:id="@+id/t9"
@@ -1104,10 +1099,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="800"
+                        android:text="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -1119,18 +1113,18 @@
                         android:textColor="@color/text_color_left"
                         android:textSize="12dp" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/e9"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
                         android:layout_weight="1"
+                        android:background="@drawable/border_set"
                         android:gravity="center"
-                        android:text="900"
+                        android:hint="000"
+                        android:layout_margin="5dp"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -1197,7 +1191,8 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="@color/text_add"
-                    android:gravity="center">
+                    android:gravity="center"
+                    >
 
                     <TextView
                         android:id="@+id/t10"
@@ -1206,10 +1201,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="900"
+                        android:text="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -1221,18 +1215,18 @@
                         android:textColor="@color/text_color_left"
                         android:textSize="12dp" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/e10"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
                         android:layout_weight="1"
+                        android:background="@drawable/border_set"
                         android:gravity="center"
-                        android:text="1000"
+                        android:hint="000"
+                        android:layout_margin="5dp"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -1242,7 +1236,9 @@
                     android:layout_gravity="center"
                     android:layout_weight="0.5"
                     android:background="@drawable/border_set"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
 
                     <TextView
                         android:layout_width="0dp"
@@ -1265,7 +1261,10 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="@color/text_add"
-                    android:gravity="center">
+                    android:gravity="center"
+
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
 
                     <EditText
                         android:id="@+id/r10"
@@ -1298,7 +1297,9 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="@color/text_even"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
 
                     <TextView
                         android:layout_width="0dp"
@@ -1306,10 +1307,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="1000"
+                        android:text="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -1319,21 +1319,20 @@
                         android:gravity="center"
                         android:text="-"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
-                    <TextView
-                        android:id="@+id/e11"
+                    <EditText
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
                         android:layout_weight="1"
+                        android:background="@drawable/border_set"
                         android:gravity="center"
-                        android:text="1100"
+                        android:hint="000"
+                        android:layout_margin="5dp"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -1342,7 +1341,9 @@
                     android:layout_gravity="center"
                     android:layout_weight="0.5"
                     android:background="@drawable/border_set"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
 
                     <TextView
                         android:layout_width="0dp"
@@ -1365,10 +1366,12 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="@color/text_even"
-                    android:gravity="center">
+                    android:gravity="center"
+
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
 
                     <EditText
-                        android:id="@+id/r11"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
@@ -1407,10 +1410,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="1100"
+                        android:text="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -1420,21 +1422,19 @@
                         android:gravity="center"
                         android:text="-"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
-                    <TextView
-                        android:id="@+id/e12"
+                    <EditText
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
                         android:layout_weight="1"
+                        android:background="@drawable/border_set"
                         android:gravity="center"
-                        android:text="1200"
+                        android:hint="000"
+                        android:layout_margin="5dp"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -1444,411 +1444,9 @@
                     android:layout_gravity="center"
                     android:layout_weight="0.5"
                     android:background="@drawable/border_set"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/text_add"
-                        android:gravity="center"
-                        android:padding="10dip"
-                        android:text="="
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@color/text_add"
-                    android:gravity="center">
-
-                    <EditText
-                        android:id="@+id/r12"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_set"
-                        android:gravity="center"
-                        android:hint="00"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp" />
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@color/text_even"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="1200"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="-"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp" />
-
-                    <TextView
-                        android:id="@+id/e13"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="1300"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
-                    android:background="@color/text_even"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/text_even"
-                        android:gravity="center"
-                        android:padding="10dip"
-                        android:text="="
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@color/text_even"
-                    android:gravity="center">
-
-                    <EditText
-                        android:id="@+id/r13"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_set"
-                        android:gravity="center"
-                        android:hint="00"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp" />
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@color/text_add"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="1300"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="-"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/e14"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="1400"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
-                    android:background="@color/text_add"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/text_add"
-                        android:gravity="center"
-                        android:padding="10dip"
-                        android:text="="
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@color/text_add"
                     android:gravity="center"
-
-                    android:text="Distance"
-                    android:textColor="@color/text_color_left">
-
-                    <EditText
-                        android:id="@+id/r14"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_set"
-                        android:gravity="center"
-                        android:hint="00"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp" />
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@color/text_even"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="1400"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="-"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp" />
-
-                    <TextView
-                        android:id="@+id/e15"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="1500"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
-                    android:background="@color/text_even"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/text_even"
-                        android:gravity="center"
-                        android:padding="10dip"
-                        android:text="="
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@color/text_even"
-                    android:gravity="center"
-
                     >
 
-                    <EditText
-                        android:id="@+id/r15"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_set"
-                        android:gravity="center"
-                        android:hint="00"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp" />
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@color/text_add"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="1500"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="-"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/e16"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="1600"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
-                    android:background="@color/text_add"
-                    android:gravity="center">
-
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="40dp"
@@ -1870,18 +1468,20 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="@color/text_add"
-                    android:gravity="center">
+                    android:gravity="center"
+
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
 
                     <EditText
-                        android:id="@+id/r16"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/border_set"
                         android:gravity="center"
                         android:hint="00"
+                        android:layout_margin="5dp"
                         android:textColor="@color/text_color_left"
                         android:textSize="12dp" />
 
@@ -1912,10 +1512,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="1600"
+                        android:text="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -1925,21 +1524,18 @@
                         android:gravity="center"
                         android:text="-"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
-                    <TextView
-                        android:id="@+id/e17"
+                    <EditText
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
                         android:layout_weight="1"
+                        android:background="@drawable/border_set"
                         android:gravity="center"
-                        android:text="1700"
+                        android:hint="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -1949,7 +1545,9 @@
                     android:layout_gravity="center"
                     android:layout_weight="0.5"
                     android:background="@drawable/border_set"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
 
                     <TextView
                         android:layout_width="0dp"
@@ -1971,121 +1569,21 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="@color/text_even"
-                    android:gravity="center">
-
-                    <EditText
-                        android:id="@+id/r17"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_set"
-                        android:gravity="center"
-                        android:hint="00"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp" />
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
                     android:background="@color/text_add"
                     android:gravity="center"
+
                     android:text="Distance"
                     android:textColor="@color/text_color_left">
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="1700"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="-"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/e18"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="1800"
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
-                    android:background="@color/text_add"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/text_add"
-                        android:gravity="center"
-                        android:padding="10dip"
-                        android:text="="
-                        android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@color/text_add"
-                    android:gravity="center">
-
                     <EditText
-                        android:id="@+id/r18"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/border_set"
                         android:gravity="center"
                         android:hint="00"
+                        android:layout_margin="5dp"
                         android:textColor="@color/text_color_left"
                         android:textSize="12dp" />
 
@@ -2116,10 +1614,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="1800"
+                        android:text="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -2129,21 +1626,18 @@
                         android:gravity="center"
                         android:text="-"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
-                    <TextView
-                        android:id="@+id/e19"
+                    <EditText
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
                         android:layout_weight="1"
+                        android:background="@drawable/border_set"
                         android:gravity="center"
-                        android:text="1900"
+                        android:hint="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -2152,7 +1646,10 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_weight="0.5"
-                    android:background="@color/text_even">
+                    android:background="@drawable/border_set"
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
 
                     <TextView
                         android:layout_width="0dp"
@@ -2174,19 +1671,21 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="@color/text_even"
-                    android:gravity="center">
+                    android:background="@color/text_add"
+                    android:gravity="center"
+
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
 
                     <EditText
-                        android:id="@+id/r19"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/border_set"
                         android:gravity="center"
                         android:hint="00"
+                        android:layout_margin="5dp"
                         android:textColor="@color/text_color_left"
                         android:textSize="12dp" />
 
@@ -2206,8 +1705,10 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="@color/text_add"
-                    android:gravity="center">
+                    android:background="@color/text_even"
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
 
                     <TextView
                         android:layout_width="0dp"
@@ -2215,10 +1716,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="1900"
+                        android:text="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -2228,21 +1728,18 @@
                         android:gravity="center"
                         android:text="-"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
-                    <TextView
-                        android:id="@+id/e20"
+                    <EditText
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
                         android:layout_weight="1"
+                        android:background="@drawable/border_set"
                         android:gravity="center"
-                        android:text="2000"
+                        android:hint="000"
                         android:textColor="@color/text_color_left"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -2251,15 +1748,17 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_weight="0.5"
-                    android:background="@color/text_add"
-                    android:gravity="center">
+                    android:background="@drawable/border_set"
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:background="@color/text_add"
+                        android:background="@color/text_even"
                         android:gravity="center"
                         android:padding="10dip"
                         android:text="="
@@ -2275,18 +1774,530 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="@color/text_add"
-                    android:gravity="center">
+                    android:gravity="center"
+
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
 
                     <EditText
-                        android:id="@+id/r20"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/border_set"
                         android:gravity="center"
                         android:hint="00"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="000"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_set"
+                        android:gravity="center"
+                        android:hint="000"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/border_set"
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/text_even"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="="
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="center"
+
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_set"
+                        android:gravity="center"
+                        android:hint="00"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="000"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_set"
+                        android:gravity="center"
+                        android:hint="000"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/border_set"
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/text_even"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="="
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="center"
+
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_set"
+                        android:gravity="center"
+                        android:hint="00"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="000"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_set"
+                        android:gravity="center"
+                        android:hint="000"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/border_set"
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/text_even"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="="
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="center"
+
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_set"
+                        android:gravity="center"
+                        android:hint="00"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="000"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_set"
+                        android:gravity="center"
+                        android:hint="000"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/border_set"
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/text_even"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="="
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="center"
+
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_set"
+                        android:gravity="center"
+                        android:hint="00"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/text_even"
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="000"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_set"
+                        android:gravity="center"
+                        android:hint="000"
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/border_set"
+                    android:gravity="center"
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/text_even"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="="
+                        android:textColor="@color/text_color_left"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/text_add"
+                    android:gravity="center"
+
+                    android:text="Distance"
+                    android:textColor="@color/text_color_left">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_set"
+                        android:gravity="center"
+                        android:hint="00"
+                        android:layout_margin="5dp"
                         android:textColor="@color/text_color_left"
                         android:textSize="12dp" />
 
